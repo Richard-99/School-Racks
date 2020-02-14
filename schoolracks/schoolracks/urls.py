@@ -23,9 +23,9 @@ from rest_framework import routers
 from rest_framework.authtoken.views import obtain_auth_token
 
 router = DefaultRouter()
-router.register(r'api/users', UserViewSet)
-router.register(r'api/racks', RackViewSet)
-router.register(r'api/students', StudentViewSet)
+router.register(r'api/users', UserViewSet, basename = 'user')
+router.register(r'api/racks', RackViewSet, basename = 'racks')
+router.register(r'api/students', StudentViewSet, basename = 'students')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
